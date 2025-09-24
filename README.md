@@ -1,6 +1,6 @@
 # Cemu Window Manager
 
-An AutoHotkey v2 script for automatically positioning and resizing Cemu emulator windows with precision. This tool provides hotkey-based window management specifically designed for multi-monitor setups and high-resolution displays.
+An AutoHotkey v2 script for automatically positioning and resizing Cemu emulator windows. This tool provides hotkey-based window management specifically designed for multi-monitor setups and high-resolution displays.
 
 ## Features
 
@@ -13,7 +13,7 @@ An AutoHotkey v2 script for automatically positioning and resizing Cemu emulator
 
 ## Configuration
 
-The script includes extensive configuration options at the top of `cemu.ahk`:
+The script includes extensive configuration options at the top of `cemu-resize.ahk`:
 
 ### Window Titles
 ```autohotkey
@@ -47,12 +47,22 @@ g_AspectH := 9                         ; GamePad aspect ratio height
 ### Hotkey Scoping
 Set `g_ScopeToCemu := true` to limit hotkeys to when Cemu is the active window, or `false` to make them global.
 
+## Installation
+
+### Option 1: Pre-compiled Executable (Recommended)
+Download the latest compiled executable from the [Releases](../../releases) section. This does not require AutoHotkey to be installed on your system.
+
+### Option 2: Run from Source
+1. Ensure AutoHotkey v2.0 is installed
+2. Download or clone this repository
+3. Run `cemu-resize.ahk` directly
+
 ## Usage
 
-1. Ensure AutoHotkey v2.0 is installed
-2. Update the window titles in the configuration section if your Cemu version differs
-3. Adjust target dimensions and positioning offsets as needed
-4. Run `cemu.ahk`
+1. If using the compiled version, simply run the downloaded executable
+2. If running from source, ensure AutoHotkey v2.0 is installed and run `cemu-resize.ahk`
+3. Update the window titles in the configuration section if your Cemu version differs
+4. Adjust target dimensions and positioning offsets as needed
 5. Launch Cemu and use the configured hotkeys
 
 ## Technical Details
@@ -74,10 +84,10 @@ Set `g_ScopeToCemu := true` to limit hotkeys to when Cemu is the active window, 
 
 ## Requirements
 
-- AutoHotkey v2.0
-- Cemu emulator
 - Windows operating system
+- Cemu emulator
+- AutoHotkey v2.0 (only required if running from source; pre-compiled executable available in releases)
 
 ## Customization
 
-All positioning logic, dimensions, and hotkeys can be customized by modifying the configuration section at the top of the script. The modular design allows for easy adaptation to different monitor setups, Cemu versions, or personal preferences.
+All positioning logic, dimensions, and hotkeys can be customized by modifying the configuration section at the top of the script for easy adaptation to different monitor setups, Cemu versions, or personal preferences.
